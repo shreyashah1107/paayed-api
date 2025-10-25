@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<meta name="description" content="Paayed api">
+	<meta name="author" content="Shreya Shah">
+	<meta name="keyword"
+		content="api, documentation, paayed, payment gateway, payments, sdk, developer, developers, integration">
+	<title>Paayed API</title>
+
+	<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+	<link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+	<link rel="manifest" href="/img/favicon/site.webmanifest" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+		rel="stylesheet">
+
+	<!-- Theme + Bootstrap styles for this application -->
+	<link href="/css/theme.css" rel="stylesheet">
+
+	<!-- Custom styles-->
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+	<!-- Sidebar -->
+	<aside class="sidebar sidebar-fixed border-end" id="sidebar" data-simplebar>
+		<div class="sidebar-header border-bottom d-flex align-items-center justify-content-between px-3 py-2">
+			<a href="/" class="sidebar-brand d-flex align-items-center gap-2 text-decoration-none">
+				<div class="sidebar-brand-full">
+					<img src="/img/logo/logo.svg" alt="Paayed Logo" width="110" height="32" loading="lazy" />
+				</div>
+				<div class="sidebar-brand-narrow d-none">
+					<img src="/img/logo/logo-sm.svg" alt="Paayed Logo Small" width="32" height="32" loading="lazy" />
+				</div>
+			</a>
+			<button class="btn-close d-lg-none" type="button" aria-label="Close Sidebar"
+				onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()"></button>
+		</div>
+
+		<!-- Sidebar Nav -->
+		<ul class="sidebar-nav" data-coreui="navigation">
+			<!-- Getting Started -->
+			<li class="nav-group">
+				<a href="#" class="nav-link nav-group-toggle">
+					<div class="nav-icon">
+						<img src="/img/icons/menu-1.svg" alt="Getting Started Icon" loading="lazy" />
+					</div>
+					<span>Getting Started</span>
+				</a>
+				<ul class="nav-group-items compact">
+					<li class="nav-item"><a href="#" class="nav-link">Introduction</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Quick Start</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Authentication</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Error Handling</a></li>
+				</ul>
+			</li>
+
+			<!-- API Reference -->
+			<li class="nav-group">
+				<a href="#" class="nav-link nav-group-toggle">
+					<div class="nav-icon">
+						<img src="/img/icons/menu-2.svg" alt="API Reference Icon" loading="lazy" />
+					</div>
+					<span>API Reference</span>
+				</a>
+				<ul class="nav-group-items compact">
+					<li class="nav-item"><a href="#" class="nav-link">Overview</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Users</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Posts</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Comments</a></li>
+					<li class="nav-item"><a href="#" class="nav-link">Media</a></li>
+				</ul>
+			</li>
+
+			<!-- Authentication -->
+			<li class="nav-group">
+				<a href="#" class="nav-link nav-group-toggle">
+					<div class="nav-icon">
+						<img src="/img/icons/menu-3.svg" alt="Authentication Icon" loading="lazy" />
+					</div>
+					<span>Authentication</span>
+				</a>
+				<ul class="nav-group-items compact">
+					<li class="nav-item"><a href="#" class="nav-link">Overview</a></li>
+				</ul>
+			</li>
+
+			<!-- Data Models -->
+			<li class="nav-group">
+				<a href="#" class="nav-link nav-group-toggle">
+					<div class="nav-icon">
+						<img src="/img/icons/menu-4.svg" alt="Data Models Icon" loading="lazy" />
+					</div>
+					<span>Data Models</span>
+				</a>
+				<ul class="nav-group-items compact">
+					<li class="nav-item"><a href="#" class="nav-link">Overview</a></li>
+				</ul>
+			</li>
+		</ul>
+	</aside>
+
+	<!-- Main Wrapper -->
+	<div class="wrapper d-flex flex-column min-vh-100">
+		<!-- Header -->
+		<header class="header header-sticky p-0 mb-4 border-bottom-0">
+			<div class="container-fluid px-4 px-xxl-5 d-flex align-items-center justify-content-between border-bottom">
+				<button class="header-toggler btn btn-link p-0 me-3" type="button" aria-label="Toggle Sidebar"
+					onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
+					<img src="/img/icons/toggle.svg" alt="Sidebar Toggle Icon" width="24" height="24" loading="lazy" />
+				</button>
+
+				<div class="d-flex align-items-center gap-3">
+					<!-- Search box -->
+					<form class="header-search d-none d-xl-flex align-items-center" role="search">
+						<div class="position-relative">
+							<input
+								type="search"
+								class="form-control rounded-5 ps-5 py-2"
+								placeholder="Search"
+								aria-label="Search"
+							/>
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="position-absolute top-50 start-0 translate-middle-y ms-3">
+								<path d="M10.6736 10.6736C12.8866 8.46063 12.8866 4.8727 10.6736 2.65973C8.46063 0.446757 4.8727 0.446757 2.65973 2.65973C0.446757 4.8727 0.446757 8.46063 2.65973 10.6736C4.8727 12.8866 8.46063 12.8866 10.6736 10.6736ZM10.6736 10.6736L13 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</div>
+					</form>
+
+					<ul class="header-nav d-none d-md-flex align-items-center gap-3 mb-0">
+						<li class="nav-item"><a href="#" class="nav-link">Guides</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Changelog</a></li>
+						<li class="nav-item"><a href="#" class="nav-link">Support</a></li>
+						<li class="nav-item">
+							<a href="#" class="btn btn-green d-flex align-items-center gap-2 px-3 py-2 rounded-3">
+								<span>Create account</span>
+								<svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.3172 7.44218L9.69219 13.0672C9.57491 13.1845 9.41585 13.2503 9.25 13.2503C9.08415 13.2503 8.92509 13.1845 8.80781 13.0672C8.69054 12.9499 8.62465 12.7908 8.62465 12.625C8.62465 12.4591 8.69054 12.3001 8.80781 12.1828L13.3664 7.625H1.125C0.95924 7.625 0.800269 7.55915 0.683058 7.44194C0.565848 7.32473 0.5 7.16576 0.5 7C0.5 6.83424 0.565848 6.67527 0.683058 6.55805C0.800269 6.44084 0.95924 6.375 1.125 6.375H13.3664L8.80781 1.81718C8.69054 1.69991 8.62465 1.54085 8.62465 1.375C8.62465 1.20914 8.69054 1.05008 8.80781 0.932809C8.92509 0.815534 9.08415 0.749649 9.25 0.749649C9.41585 0.749649 9.57491 0.815534 9.69219 0.932809L15.3172 6.55781C15.3753 6.61585 15.4214 6.68478 15.4529 6.76066C15.4843 6.83653 15.5005 6.91786 15.5005 7C15.5005 7.08213 15.4843 7.16346 15.4529 7.23933C15.4214 7.31521 15.3753 7.38414 15.3172 7.44218Z"
+										fill="currentColor" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main Content -->
+		<main class="body flex-grow-1">
+			<div class="container-lg px-4 px-xxl-5 py-3">
+				<h1 class="h4 mb-3 fw-semibold">Main Content</h1>
+			</div>
+		</main>
+	</div>
+
+	<!-- JS Files -->
+	<script src="/js/simplebar.min.js"></script>
+	<script src="/js/theme.min.js"></script>
+	<script src="/js/main.js"></script>
+</body>
+
+</html>
