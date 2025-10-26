@@ -70,4 +70,76 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
     }
   });
+
+  // Feedback popup logic
+  const feedbackBlocks = document.querySelectorAll('.feedback');
+
+  feedbackBlocks.forEach(feedback => {
+    const yesBtn = feedback.querySelector('.yes');
+    const noBtn = feedback.querySelector('.no');
+    const popup = feedback.querySelector('.feedback-popup');
+    const cancelBtn = feedback.querySelector('.btn-cancel');
+    const submitBtn = feedback.querySelector('.btn-submit');
+
+    noBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      document.querySelectorAll('.feedback-popup.active').forEach(p => {
+        if (p !== popup) p.classList.remove('active');
+      });
+      popup.classList.toggle('active');
+    });
+
+    [yesBtn, cancelBtn, submitBtn].forEach(btn => {
+      btn.addEventListener('click', () => popup.classList.remove('active'));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (popup.classList.contains('active') && !popup.contains(e.target) && !noBtn.contains(e.target)) {
+        popup.classList.remove('active');
+      }
+    });
+  });
+
+  // Copy to clipboard logic
+  document.addEventListener('click', (e) => {
+    const copyBtn = e.target.closest('.btn-copy');
+    if (!copyBtn) return;
+
+    const infoCard = copyBtn.closest('.info-card');
+    const urls = Array.from(infoCard.querySelectorAll('.info-card-text'))
+                      .map(el => el.textContent.trim())
+                      .join('\n');
+
+    navigator.clipboard.writeText(urls).then(() => {
+      const original = copyBtn.innerHTML;
+      copyBtn.innerHTML = '✅';
+      setTimeout(() => (copyBtn.innerHTML = original), 1200);
+    });
+  });
+
+  // Language dropdown logic
+  const dropdowns = document.querySelectorAll('.language-dropdown');
+
+  dropdowns.forEach(dropdown => {
+    const selected = dropdown.querySelector('.dropdown-selected');
+    const optionsContainer = dropdown.querySelector('.dropdown-options');
+    const optionsList = dropdown.querySelectorAll('.dropdown-option');
+
+    selected.addEventListener('click', () => {
+      optionsContainer.style.display = optionsContainer.style.display === 'block' ? 'none' : 'block';
+    });
+
+    optionsList.forEach(option => {
+      option.addEventListener('click', () => {
+        selected.innerHTML = option.innerText + ' <span class="arrow">&#9662;</span>';
+        optionsContainer.style.display = 'none';
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        optionsContainer.style.display = 'none';
+      }
+    });
+  });
 });

@@ -89,7 +89,7 @@
     --cui-body-font-size: 1rem;
     --cui-body-font-weight: 400;
     --cui-body-line-height: 1.5;
-    --cui-body-color: rgba(37, 42.92, 54.02, 0.95);
+    --cui-body-color: #5c5c5c;
     --cui-body-color-rgb: 37, 42.92, 54.02;
     --cui-body-bg: #fff;
     --cui-body-bg-rgb: 255, 255, 255;
@@ -123,7 +123,7 @@
     --cui-high-emphasis-inverse: rgba(255, 255, 255, 0.87);
     --cui-medium-emphasis-inverse: rgba(255, 255, 255, 0.6);
     --cui-disabled-inverse: rgba(255, 255, 255, 0.38);
-    --cui-heading-color: inherit;
+    --cui-heading-color: #09140E;
     --cui-link-color: #5856d6;
     --cui-link-color-rgb: 88, 86, 214;
     --cui-link-decoration: underline;

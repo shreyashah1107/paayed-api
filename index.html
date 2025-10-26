@@ -123,14 +123,15 @@
 					<!-- Search box -->
 					<form class="header-search d-none d-xl-flex align-items-center" role="search">
 						<div class="position-relative">
-							<input
-								type="search"
-								class="form-control rounded-5 ps-5 py-2"
-								placeholder="Search"
-								aria-label="Search"
-							/>
-							<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="position-absolute top-50 start-0 translate-middle-y ms-3">
-								<path d="M10.6736 10.6736C12.8866 8.46063 12.8866 4.8727 10.6736 2.65973C8.46063 0.446757 4.8727 0.446757 2.65973 2.65973C0.446757 4.8727 0.446757 8.46063 2.65973 10.6736C4.8727 12.8866 8.46063 12.8866 10.6736 10.6736ZM10.6736 10.6736L13 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+							<input type="search" class="form-control rounded-5 ps-5 py-2" placeholder="Search"
+								aria-label="Search" />
+							<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								class="position-absolute top-50 start-0 translate-middle-y ms-3">
+								<path
+									d="M10.6736 10.6736C12.8866 8.46063 12.8866 4.8727 10.6736 2.65973C8.46063 0.446757 4.8727 0.446757 2.65973 2.65973C0.446757 4.8727 0.446757 8.46063 2.65973 10.6736C4.8727 12.8866 8.46063 12.8866 10.6736 10.6736ZM10.6736 10.6736L13 13"
+									stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+									stroke-linejoin="round" />
 							</svg>
 						</div>
 					</form>
@@ -156,10 +157,406 @@
 		</header>
 
 		<!-- Main Content -->
-		<main class="body flex-grow-1">
-			<div class="container-lg px-4 px-xxl-5 py-3">
-				<h1 class="h4 mb-3 fw-semibold">Main Content</h1>
-			</div>
+		<main class="flex-grow-1">
+			<div class="container-lg px-4 px-xxl-5 py-4">
+				<div class="row gx-5">
+					<div class="col-xl-7">
+						<h1 class="h4 fw-medium mb-3">Paayed API Reference (v0.1)</h1>
+
+						<p class="small">Paayed's REST APIs let you build modern money experiences: onboard customers
+							(KYC/KYB), open multi-currency accounts, issue cards, accept and send payments, convert FX,
+							and reconcile with real-time webhooks.</p>
+
+						<div class="feedback">
+							<p class="feedback-question">Was this section helpful?</p>
+
+							<div class="feedback-buttons">
+								<button class="btn-feedback yes">Yes</button>
+								<button class="btn-feedback no">No</button>
+							</div>
+
+							<div class="feedback-popup" id="feedbackPopup">
+								<h3>What made this section unhelpful?</h3>
+								<label>
+									<input type="radio" name="reason">
+									Confusing or unclear information
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Incorrect or outdated information
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Incomplete information or samples
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Other
+								</label>
+
+								<div class="popup-actions">
+									<button class="btn-cancel">Cancel</button>
+									<button class="btn-submit">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-5">
+						<div class="info-card">
+							<div class="info-card-header">
+								<h3 class="info-card-title">Base URL</h3>
+								<button class="btn-copy" aria-label="Copy URL">
+									<svg width="20" height="24" viewBox="0 0 20 24" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M6.93397 0C5.70897 0 4.69697 0.942 4.56097 2.133H2.66697C1.34197 2.133 0.266968 3.208 0.266968 4.533V18.933C0.266968 20.259 1.34197 21.333 2.66697 21.333H6.66697V12.267C6.66697 11.383 7.38297 10.667 8.26697 10.667H17.334V4.533C17.334 3.208 16.259 2.133 14.934 2.133H13.04C12.904 0.943 11.892 0 10.667 0H6.93397ZM6.93397 1.6H10.667C11.118 1.6 11.467 1.949 11.467 2.4C11.467 2.851 11.118 3.2 10.667 3.2H6.93397C6.48197 3.2 6.13397 2.851 6.13397 2.4C6.13397 1.949 6.48197 1.6 6.93397 1.6ZM8.53397 11.733C8.09197 11.733 7.73397 12.092 7.73397 12.533C7.73397 12.975 8.09197 13.333 8.53397 13.333C8.97497 13.333 9.33397 12.975 9.33397 12.533C9.33397 12.092 8.97497 11.733 8.53397 11.733ZM11.2 11.733C10.759 11.733 10.4 12.092 10.4 12.533C10.4 12.975 10.759 13.333 11.2 13.333C11.642 13.333 12 12.975 12 12.533C12 12.092 11.642 11.733 11.2 11.733ZM13.867 11.733C13.425 11.733 13.067 12.092 13.067 12.533C13.067 12.975 13.425 13.333 13.867 13.333C14.309 13.333 14.667 12.975 14.667 12.533C14.667 12.092 14.309 11.733 13.867 11.733ZM16.534 11.733C16.092 11.733 15.734 12.092 15.734 12.533C15.734 12.975 16.092 13.333 16.534 13.333C16.975 13.333 17.334 12.975 17.334 12.533C17.334 12.092 16.975 11.733 16.534 11.733ZM19.2 11.733C18.759 11.733 18.4 12.092 18.4 12.533C18.4 12.975 18.759 13.333 19.2 13.333C19.642 13.333 20 12.975 20 12.533C20 12.092 19.642 11.733 19.2 11.733ZM8.53397 14.4C8.09197 14.4 7.73397 14.758 7.73397 15.2C7.73397 15.642 8.09197 16 8.53397 16C8.97497 16 9.33397 15.642 9.33397 15.2C9.33397 14.758 8.97497 14.4 8.53397 14.4ZM19.2 14.4C18.759 14.4 18.4 14.758 18.4 15.2C18.4 15.642 18.759 16 19.2 16C19.642 16 20 15.642 20 15.2C20 14.758 19.642 14.4 19.2 14.4ZM8.53397 17.067C8.09197 17.067 7.73397 17.425 7.73397 17.867C7.73397 18.308 8.09197 18.667 8.53397 18.667C8.97497 18.667 9.33397 18.308 9.33397 17.867C9.33397 17.425 8.97497 17.067 8.53397 17.067ZM19.2 17.067C18.759 17.067 18.4 17.425 18.4 17.867C18.4 18.308 18.759 18.667 19.2 18.667C19.642 18.667 20 18.308 20 17.867C20 17.425 19.642 17.067 19.2 17.067ZM8.53397 19.733C8.09197 19.733 7.73397 20.092 7.73397 20.533C7.73397 20.975 8.09197 21.333 8.53397 21.333C8.97497 21.333 9.33397 20.975 9.33397 20.533C9.33397 20.092 8.97497 19.733 8.53397 19.733ZM19.2 19.733C18.759 19.733 18.4 20.092 18.4 20.533C18.4 20.975 18.759 21.333 19.2 21.333C19.642 21.333 20 20.975 20 20.533C20 20.092 19.642 19.733 19.2 19.733ZM8.53397 22.4C8.09197 22.4 7.73397 22.758 7.73397 23.2C7.73397 23.642 8.09197 24 8.53397 24C8.97497 24 9.33397 23.642 9.33397 23.2C9.33397 22.758 8.97497 22.4 8.53397 22.4ZM11.2 22.4C10.759 22.4 10.4 22.758 10.4 23.2C10.4 23.642 10.759 24 11.2 24C11.642 24 12 23.642 12 23.2C12 22.758 11.642 22.4 11.2 22.4ZM13.867 22.4C13.425 22.4 13.067 22.758 13.067 23.2C13.067 23.642 13.425 24 13.867 24C14.309 24 14.667 23.642 14.667 23.2C14.667 22.758 14.309 22.4 13.867 22.4ZM16.534 22.4C16.092 22.4 15.734 22.758 15.734 23.2C15.734 23.642 16.092 24 16.534 24C16.975 24 17.334 23.642 17.334 23.2C17.334 22.758 16.975 22.4 16.534 22.4ZM19.2 22.4C18.759 22.4 18.4 22.758 18.4 23.2C18.4 23.642 18.759 24 19.2 24C19.642 24 20 23.642 20 23.2C20 22.758 19.642 22.4 19.2 22.4Z"
+											fill="#D1D6DD" />
+									</svg>
+								</button>
+							</div>
+
+							<div class="info-card-body">
+								<div class="info-card-item">
+									<span class="info-card-label">Production:</span>
+									<span class="info-card-text d-block">https://api.paayed.com/</span>
+								</div>
+
+								<div class="info-card-item mt-2">
+									<span class="info-card-label">Sandbox:</span>
+									<span class="info-card-text d-block">https://sandbox.paayed.com/</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="supported-languages">
+							<div class="supported-languages-header">
+								<h3 class="supported-languages-title">Supported Languages</h3>
+							</div>
+							<div class="supported-languages-body">
+								<div class="language-list">
+									<div class="language-item">
+										<div class="language-icon">
+											<img src="./img/logo/curl-logo.svg" alt="cURL">
+										</div>
+										<span>cURL</span>
+									</div>
+
+									<div class="language-item">
+										<div class="language-icon">
+											<img src="./img/logo/ruby.svg" alt="Ruby">
+										</div>
+										<span>Ruby</span>
+									</div>
+
+									<div class="language-item">
+										<div class="language-icon">
+											<img src="./img/logo/python.svg" alt="Python">
+										</div>
+										<span>Python</span>
+									</div>
+
+									<div class="language-item">
+										<div class="language-icon">
+											<img src="./img/logo/php.svg" alt="PHP">
+										</div>
+										<span>PHP</span>
+									</div>
+
+									<div class="language-item">
+										<div class="language-icon">
+											<img src="./img/logo/java.svg" alt="Java">
+										</div>
+										<span>Java</span>
+									</div>
+
+									<div class="language-item">
+										<div class="language-icon">
+											<img src="./img/logo/node.svg" alt="Node.js">
+										</div>
+										<span>NodeJS</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row gx-5 mt-5">
+					<div class="col-xl-7">
+						<h2 class="h4 fw-medium mb-3">Authentication</h2>
+
+						<p class="small">Use API keys for server-to-server calls and OAuth 2.0 for user-delegated flows
+							(Connect-style). Include your key in the header:</p>
+
+						<h2 class="h4 fw-medium mb-3 mt-4 pt-2">OAuth 2.0 (Confidential Clients)</h2>
+
+						<ul>
+							<li>Authorization Code with PKCE.</li>
+							<li>Scopes: accounts.read, accounts.write, payments.create, customers.write, cards.write,
+								webhooks.write, etc.</li>
+						</ul>
+
+						<div class="feedback">
+							<p class="feedback-question">Was this section helpful?</p>
+
+							<div class="feedback-buttons">
+								<button class="btn-feedback yes">Yes</button>
+								<button class="btn-feedback no">No</button>
+							</div>
+
+							<div class="feedback-popup" id="feedbackPopup">
+								<h3>What made this section unhelpful?</h3>
+								<label>
+									<input type="radio" name="reason">
+									Confusing or unclear information
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Incorrect or outdated information
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Incomplete information or samples
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Other
+								</label>
+
+								<div class="popup-actions">
+									<button class="btn-cancel">Cancel</button>
+									<button class="btn-submit">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-5">
+						<div class="info-card">
+							<div class="info-card-body">
+								<div class="info-card-item">
+									<span class="info-card-label">Authorization:</span>
+									<span class="info-card-text">Bearer PAAYED_API_KEY</span>
+								</div>
+
+								<div class="info-card-item">
+									<span class="info-card-label">Paayed-Version:</span>
+									<span class="info-card-text">2025-09-01</span>
+								</div>
+
+								<div class="info-card-item">
+									<span class="info-card-label">Idempotency-Key:</span>
+									<span class="info-card-text">&lt;uuid&gt;</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row gx-5 mt-5">
+					<div class="col-xl-7">
+						<h2 class="h4 fw-medium mb-3">Errors</h2>
+
+						<p class="small">Paayed uses conventional HTTP status codes. Error body shape:</p>
+
+						<div class="summary-block">
+							<div class="summary-block-header">
+								<h3 class="summary-block-title">Summary</h3>
+							</div>
+							<div class="summary-block-body">
+								<div class="summary-item">
+									<div class="error-label">200</div>
+									<div class="error-text">OK - Success.</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">201</div>
+									<div class="error-text">Created - Resource created.</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">202</div>
+									<div class="error-text">Accepted - Processing asynchronously.</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">400</div>
+									<div class="error-text">Bad Request - Invalid payload.</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">401</div>
+									<div class="error-text">Unauthorized - Missing/invalid credentials.</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">403</div>
+									<div class="error-text">Forbidden - Insufficient scope/role.</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">404</div>
+									<div class="error-text">Not Found - Resource missing.</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">409</div>
+									<div class="error-text">Conflict - Duplicate / state conflict.</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">422</div>
+									<div class="error-text">Unprocessable - Business rule failed (e.g., compliance
+										block).</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">429</div>
+									<div class="error-text">Too Many Requests - Rate limit.</div>
+								</div>
+
+								<div class="summary-item">
+									<div class="error-label">500/502/503</div>
+									<div class="error-text">Server error.</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="feedback">
+							<p class="feedback-question">Was this section helpful?</p>
+
+							<div class="feedback-buttons">
+								<button class="btn-feedback yes">Yes</button>
+								<button class="btn-feedback no">No</button>
+							</div>
+
+							<div class="feedback-popup" id="feedbackPopup">
+								<h3>What made this section unhelpful?</h3>
+								<label>
+									<input type="radio" name="reason">
+									Confusing or unclear information
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Incorrect or outdated information
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Incomplete information or samples
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Other
+								</label>
+
+								<div class="popup-actions">
+									<button class="btn-cancel">Cancel</button>
+									<button class="btn-submit">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-5">
+						<div class="code-block">
+							<!-- Header -->
+							<div class="code-block-header d-flex justify-content-between align-items-center">
+								<h3 class="code-block-title">Errors</h3>
+
+								<div class="d-flex align-items-center gap-4">
+									<!-- Language dropdown -->
+									<div class="language-dropdown">
+										<div class="dropdown-selected">Java <span class="arrow">&#9662;</span></div>
+										<div class="dropdown-options">
+											<div class="dropdown-option">Java</div>
+											<div class="dropdown-option">Python</div>
+											<div class="dropdown-option">cURL</div>
+										</div>
+									</div>
+
+									<!-- Copy button -->
+									<button class="btn-copy-alt" onclick="copyCode(this)">
+										<svg width="20" height="24" viewBox="0 0 20 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M6.93397 0C5.70897 0 4.69697 0.942 4.56097 2.133H2.66697C1.34197 2.133 0.266968 3.208 0.266968 4.533V18.933C0.266968 20.259 1.34197 21.333 2.66697 21.333H6.66697V12.267C6.66697 11.383 7.38297 10.667 8.26697 10.667H17.334V4.533C17.334 3.208 16.259 2.133 14.934 2.133H13.04C12.904 0.943 11.892 0 10.667 0H6.93397ZM6.93397 1.6H10.667C11.118 1.6 11.467 1.949 11.467 2.4C11.467 2.851 11.118 3.2 10.667 3.2H6.93397C6.48197 3.2 6.13397 2.851 6.13397 2.4C6.13397 1.949 6.48197 1.6 6.93397 1.6ZM8.53397 11.733C8.09197 11.733 7.73397 12.092 7.73397 12.533C7.73397 12.975 8.09197 13.333 8.53397 13.333C8.97497 13.333 9.33397 12.975 9.33397 12.533C9.33397 12.092 8.97497 11.733 8.53397 11.733ZM11.2 11.733C10.759 11.733 10.4 12.092 10.4 12.533C10.4 12.975 10.759 13.333 11.2 13.333C11.642 13.333 12 12.975 12 12.533C12 12.092 11.642 11.733 11.2 11.733ZM13.867 11.733C13.425 11.733 13.067 12.092 13.067 12.533C13.067 12.975 13.425 13.333 13.867 13.333C14.309 13.333 14.667 12.975 14.667 12.533C14.667 12.092 14.309 11.733 13.867 11.733ZM16.534 11.733C16.092 11.733 15.734 12.092 15.734 12.533C15.734 12.975 16.092 13.333 16.534 13.333C16.975 13.333 17.334 12.975 17.334 12.533C17.334 12.092 16.975 11.733 16.534 11.733ZM19.2 11.733C18.759 11.733 18.4 12.092 18.4 12.533C18.4 12.975 18.759 13.333 19.2 13.333C19.642 13.333 20 12.975 20 12.533C20 12.092 19.642 11.733 19.2 11.733ZM8.53397 14.4C8.09197 14.4 7.73397 14.758 7.73397 15.2C7.73397 15.642 8.09197 16 8.53397 16C8.97497 16 9.33397 15.642 9.33397 15.2C9.33397 14.758 8.97497 14.4 8.53397 14.4ZM19.2 14.4C18.759 14.4 18.4 14.758 18.4 15.2C18.4 15.642 18.759 16 19.2 16C19.642 16 20 15.642 20 15.2C20 14.758 19.642 14.4 19.2 14.4ZM8.53397 17.067C8.09197 17.067 7.73397 17.425 7.73397 17.867C7.73397 18.308 8.09197 18.667 8.53397 18.667C8.97497 18.667 9.33397 18.308 9.33397 17.867C9.33397 17.425 8.97497 17.067 8.53397 17.067ZM19.2 17.067C18.759 17.067 18.4 17.425 18.4 17.867C18.4 18.308 18.759 18.667 19.2 18.667C19.642 18.667 20 18.308 20 17.867C20 17.425 19.642 17.067 19.2 17.067ZM8.53397 19.733C8.09197 19.733 7.73397 20.092 7.73397 20.533C7.73397 20.975 8.09197 21.333 8.53397 21.333C8.97497 21.333 9.33397 20.975 9.33397 20.533C9.33397 20.092 8.97497 19.733 8.53397 19.733ZM19.2 19.733C18.759 19.733 18.4 20.092 18.4 20.533C18.4 20.975 18.759 21.333 19.2 21.333C19.642 21.333 20 20.975 20 20.533C20 20.092 19.642 19.733 19.2 19.733ZM8.53397 22.4C8.09197 22.4 7.73397 22.758 7.73397 23.2C7.73397 23.642 8.09197 24 8.53397 24C8.97497 24 9.33397 23.642 9.33397 23.2C9.33397 22.758 8.97497 22.4 8.53397 22.4ZM11.2 22.4C10.759 22.4 10.4 22.758 10.4 23.2C10.4 23.642 10.759 24 11.2 24C11.642 24 12 23.642 12 23.2C12 22.758 11.642 22.4 11.2 22.4ZM13.867 22.4C13.425 22.4 13.067 22.758 13.067 23.2C13.067 23.642 13.425 24 13.867 24C14.309 24 14.667 23.642 14.667 23.2C14.667 22.758 14.309 22.4 13.867 22.4ZM16.534 22.4C16.092 22.4 15.734 22.758 15.734 23.2C15.734 23.642 16.092 24 16.534 24C16.975 24 17.334 23.642 17.334 23.2C17.334 22.758 16.975 22.4 16.534 22.4ZM19.2 22.4C18.759 22.4 18.4 22.758 18.4 23.2C18.4 23.642 18.759 24 19.2 24C19.642 24 20 23.642 20 23.2C20 22.758 19.642 22.4 19.2 22.4Z"
+												fill="#D1D6DD" />
+										</svg>
+									</button>
+								</div>
+							</div>
+
+							<!-- Code section -->
+							<div class="code-block-body">
+								<pre>
+								<code>
+{
+"error": {
+"type": "validation_error",
+"code": "missing_required_field",
+"message": "given_name is required",
+"request_id": "req_01HZY...",
+"details": [{"field":"given_name","issue":"required"}]
+}
+}
+								</code></pre>
+							</div>
+
+							<!-- Try in API Explorer -->
+							<div class="code-block-footer text-end">
+								<button class="btn btn-green">Try in API Explorer</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row gx-5 mt-5">
+						<div class="col-xl-7">
+							<h2 class="h4 fw-medium mb-3">Create customer</h2>
+
+							<p class="small">Create and manage individual or business customers for compliance and
+								account ownership.</p>
+
+							<div class="feedback">
+								<p class="feedback-question">Was this section helpful?</p>
+
+								<div class="feedback-buttons">
+									<button class="btn-feedback yes">Yes</button>
+									<button class="btn-feedback no">No</button>
+								</div>
+
+								<div class="feedback-popup" id="feedbackPopup">
+									<h3>What made this section unhelpful?</h3>
+									<label>
+										<input type="radio" name="reason">
+										Confusing or unclear information
+									</label>
+									<label>
+										<input type="radio" name="reason">
+										Incorrect or outdated information
+									</label>
+									<label>
+										<input type="radio" name="reason">
+										Incomplete information or samples
+									</label>
+									<label>
+										<input type="radio" name="reason">
+										Other
+									</label>
+
+									<div class="popup-actions">
+										<button class="btn-cancel">Cancel</button>
+										<button class="btn-submit">Submit</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-5">
+
+						</div>
+					</div>
+				</div>
 		</main>
 	</div>
 
@@ -167,6 +564,13 @@
 	<script src="./js/simplebar.min.js"></script>
 	<script src="./js/theme.min.js"></script>
 	<script src="./js/main.js"></script>
+
+	<script>
+		function copyCode(btn) {
+			const code = btn.closest('.code-block').querySelector('pre code').innerText;
+			navigator.clipboard.writeText(code);
+		}
+	</script>
 </body>
 
 </html>
