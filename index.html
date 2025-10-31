@@ -467,7 +467,7 @@
 								<div class="d-flex align-items-center gap-4">
 									<!-- Language dropdown -->
 									<div class="language-dropdown">
-										<div class="dropdown-selected">Java <span class="arrow">&#9662;</span></div>
+										<div class="dropdown-selected">cURL <span class="arrow">&#9662;</span></div>
 										<div class="dropdown-options">
 											<div class="dropdown-option">Java</div>
 											<div class="dropdown-option">Python</div>
@@ -493,11 +493,11 @@
 								<code>
 {
 "error": {
-"type": "validation_error",
-"code": "missing_required_field",
-"message": "given_name is required",
-"request_id": "req_01HZY...",
-"details": [{"field":"given_name","issue":"required"}]
+"type": <span>"validation_error"</span>,
+"code": <span>"missing_required_field"</span>,
+"message": <span>"given_name is required"</span>,
+"request_id": <span>"req_01HZY..."</span>,
+"details": [{"field":<span>"given_name"</span>,"issue":<span>"required"</span>}]
 }
 }
 								</code></pre>
@@ -509,54 +509,189 @@
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="row gx-5 mt-5">
-						<div class="col-xl-7">
-							<h2 class="h4 fw-medium mb-3">Create customer</h2>
+				<div class="row gx-5 mt-5">
+					<div class="col-xl-7">
+						<h2 class="h4 fw-medium mb-3">Create customer</h2>
 
-							<p class="small">Create and manage individual or business customers for compliance and
-								account ownership.</p>
+						<p class="small">Create and manage individual or business customers for compliance and
+							account ownership.</p>
 
-							<div class="feedback">
-								<p class="feedback-question">Was this section helpful?</p>
+						<div class="conventions-block mt-5">
+							<h3 class="conventions-title">CONVENTIONS</h3>
 
-								<div class="feedback-buttons">
-									<button class="btn-feedback yes">Yes</button>
-									<button class="btn-feedback no">No</button>
-								</div>
+							<div class="conventions-item">
+								<span class="label">Pagination:</span>
+								<span class="value">cursor-based. Use limit and starting_after/ending_before.
+									Responses include has_more and next_cursor.</span>
+							</div>
 
-								<div class="feedback-popup" id="feedbackPopup">
-									<h3>What made this section unhelpful?</h3>
-									<label>
-										<input type="radio" name="reason">
-										Confusing or unclear information
-									</label>
-									<label>
-										<input type="radio" name="reason">
-										Incorrect or outdated information
-									</label>
-									<label>
-										<input type="radio" name="reason">
-										Incomplete information or samples
-									</label>
-									<label>
-										<input type="radio" name="reason">
-										Other
-									</label>
+							<div class="conventions-item">
+								<span class="label">Idempotency:</span>
+								<span class="value">supply Idempotency-Key for mutation calls; same key + same
+									payload → same result.</span>
+							</div>
 
-									<div class="popup-actions">
-										<button class="btn-cancel">Cancel</button>
-										<button class="btn-submit">Submit</button>
-									</div>
+							<div class="conventions-item">
+								<span class="label">Timestamps:</span>
+								<span class="value">ISO-8601 UTC.</span>
+							</div>
+
+							<div class="conventions-item">
+								<span class="label">Amounts:</span>
+								<span class="value">Integers in minor units (e.g., cents). Currency ISO-4217.</span>
+							</div>
+
+							<div class="conventions-item">
+								<span class="label">Webhooks:</span>
+								<span class="value">signed with Paayed-Signature (HMAC-SHA256). Tolerance: 5
+									minutes.</span>
+							</div>
+						</div>
+
+						<div class="responses-block mt-5">
+							<h3 class="responses-title">RESPONSES</h3>
+
+							<div class="response-item">
+								<div class="status is-200">
+									<span class="dot"></span>
+									<span class="code">200</span>
+									<span class="desc">Object</span>
 								</div>
 							</div>
 						</div>
 
-						<div class="col-xl-5">
+						<div class="responses-block mt-4">
+							<h3 class="responses-title">RESPONSE ATTRIBUTES</h3>
 
+							<div class="response-attr">
+								<p class="attr"><span>customer</span> object</p>
+								<p class="attr">Customer given name</p>
+								<button class="btn-show">+ Show child attributes</button>
+							</div>
+						</div>
+
+						<div class="feedback">
+							<p class="feedback-question">Was this section helpful?</p>
+
+							<div class="feedback-buttons">
+								<button class="btn-feedback yes">Yes</button>
+								<button class="btn-feedback no">No</button>
+							</div>
+
+							<div class="feedback-popup" id="feedbackPopup">
+								<h3>What made this section unhelpful?</h3>
+								<label>
+									<input type="radio" name="reason">
+									Confusing or unclear information
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Incorrect or outdated information
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Incomplete information or samples
+								</label>
+								<label>
+									<input type="radio" name="reason">
+									Other
+								</label>
+
+								<div class="popup-actions">
+									<button class="btn-cancel">Cancel</button>
+									<button class="btn-submit">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-xl-5">
+						<div class="code-block">
+							<!-- Header -->
+							<div class="code-block-header d-flex justify-content-between align-items-center">
+								<h3 class="code-block-title">POST <span>/customers?</span></h3>
+
+								<div class="d-flex align-items-center gap-4">
+									<!-- Language dropdown -->
+									<div class="language-dropdown">
+										<div class="dropdown-selected">cURL <span class="arrow">&#9662;</span></div>
+										<div class="dropdown-options">
+											<div class="dropdown-option">Java</div>
+											<div class="dropdown-option">Python</div>
+											<div class="dropdown-option">cURL</div>
+										</div>
+									</div>
+
+									<!-- Copy button -->
+									<button class="btn-copy-alt" onclick="copyCode(this)">
+										<svg width="20" height="24" viewBox="0 0 20 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path
+												d="M6.93397 0C5.70897 0 4.69697 0.942 4.56097 2.133H2.66697C1.34197 2.133 0.266968 3.208 0.266968 4.533V18.933C0.266968 20.259 1.34197 21.333 2.66697 21.333H6.66697V12.267C6.66697 11.383 7.38297 10.667 8.26697 10.667H17.334V4.533C17.334 3.208 16.259 2.133 14.934 2.133H13.04C12.904 0.943 11.892 0 10.667 0H6.93397ZM6.93397 1.6H10.667C11.118 1.6 11.467 1.949 11.467 2.4C11.467 2.851 11.118 3.2 10.667 3.2H6.93397C6.48197 3.2 6.13397 2.851 6.13397 2.4C6.13397 1.949 6.48197 1.6 6.93397 1.6ZM8.53397 11.733C8.09197 11.733 7.73397 12.092 7.73397 12.533C7.73397 12.975 8.09197 13.333 8.53397 13.333C8.97497 13.333 9.33397 12.975 9.33397 12.533C9.33397 12.092 8.97497 11.733 8.53397 11.733ZM11.2 11.733C10.759 11.733 10.4 12.092 10.4 12.533C10.4 12.975 10.759 13.333 11.2 13.333C11.642 13.333 12 12.975 12 12.533C12 12.092 11.642 11.733 11.2 11.733ZM13.867 11.733C13.425 11.733 13.067 12.092 13.067 12.533C13.067 12.975 13.425 13.333 13.867 13.333C14.309 13.333 14.667 12.975 14.667 12.533C14.667 12.092 14.309 11.733 13.867 11.733ZM16.534 11.733C16.092 11.733 15.734 12.092 15.734 12.533C15.734 12.975 16.092 13.333 16.534 13.333C16.975 13.333 17.334 12.975 17.334 12.533C17.334 12.092 16.975 11.733 16.534 11.733ZM19.2 11.733C18.759 11.733 18.4 12.092 18.4 12.533C18.4 12.975 18.759 13.333 19.2 13.333C19.642 13.333 20 12.975 20 12.533C20 12.092 19.642 11.733 19.2 11.733ZM8.53397 14.4C8.09197 14.4 7.73397 14.758 7.73397 15.2C7.73397 15.642 8.09197 16 8.53397 16C8.97497 16 9.33397 15.642 9.33397 15.2C9.33397 14.758 8.97497 14.4 8.53397 14.4ZM19.2 14.4C18.759 14.4 18.4 14.758 18.4 15.2C18.4 15.642 18.759 16 19.2 16C19.642 16 20 15.642 20 15.2C20 14.758 19.642 14.4 19.2 14.4ZM8.53397 17.067C8.09197 17.067 7.73397 17.425 7.73397 17.867C7.73397 18.308 8.09197 18.667 8.53397 18.667C8.97497 18.667 9.33397 18.308 9.33397 17.867C9.33397 17.425 8.97497 17.067 8.53397 17.067ZM19.2 17.067C18.759 17.067 18.4 17.425 18.4 17.867C18.4 18.308 18.759 18.667 19.2 18.667C19.642 18.667 20 18.308 20 17.867C20 17.425 19.642 17.067 19.2 17.067ZM8.53397 19.733C8.09197 19.733 7.73397 20.092 7.73397 20.533C7.73397 20.975 8.09197 21.333 8.53397 21.333C8.97497 21.333 9.33397 20.975 9.33397 20.533C9.33397 20.092 8.97497 19.733 8.53397 19.733ZM19.2 19.733C18.759 19.733 18.4 20.092 18.4 20.533C18.4 20.975 18.759 21.333 19.2 21.333C19.642 21.333 20 20.975 20 20.533C20 20.092 19.642 19.733 19.2 19.733ZM8.53397 22.4C8.09197 22.4 7.73397 22.758 7.73397 23.2C7.73397 23.642 8.09197 24 8.53397 24C8.97497 24 9.33397 23.642 9.33397 23.2C9.33397 22.758 8.97497 22.4 8.53397 22.4ZM11.2 22.4C10.759 22.4 10.4 22.758 10.4 23.2C10.4 23.642 10.759 24 11.2 24C11.642 24 12 23.642 12 23.2C12 22.758 11.642 22.4 11.2 22.4ZM13.867 22.4C13.425 22.4 13.067 22.758 13.067 23.2C13.067 23.642 13.425 24 13.867 24C14.309 24 14.667 23.642 14.667 23.2C14.667 22.758 14.309 22.4 13.867 22.4ZM16.534 22.4C16.092 22.4 15.734 22.758 15.734 23.2C15.734 23.642 16.092 24 16.534 24C16.975 24 17.334 23.642 17.334 23.2C17.334 22.758 16.975 22.4 16.534 22.4ZM19.2 22.4C18.759 22.4 18.4 22.758 18.4 23.2C18.4 23.642 18.759 24 19.2 24C19.642 24 20 23.642 20 23.2C20 22.758 19.642 22.4 19.2 22.4Z"
+												fill="#D1D6DD" />
+										</svg>
+									</button>
+								</div>
+							</div>
+
+							<!-- Code section -->
+							<div class="code-block-body">
+								<pre>
+								<code>
+curl -X POST https://api.paayed.com/v1/customers \
+-H "Authorization: <span>Bearer PAAYED_API_KEY" \</span>
+-H "Content-Type: <span>application/json"</span> \
+-H "Idempotency-Key: <span>8b8d1d1b-2e4e-4a1b-9b10-7e6e0fa0a111" \
+-d</span> '{
+"type": "individual",
+"given_name": "Smith",
+"family_name": "Doe",
+"email": "smith@example.com",
+"phone": "+44201234567",
+"address": {
+"line1": "12 Oxford Street",
+"city": "London",
+"postal_code": "BY 225-1234",
+"country": "UK"
+}
+}'</code></pre>
+							</div>
+
+							<!-- Try in API Explorer -->
+							<div class="code-block-footer text-end">
+								<button class="btn btn-green">Try in API Explorer</button>
+							</div>
+						</div>
+
+						<div class="code-block code-block--light mt-5">
+							<!-- Header -->
+							<div class="code-block-header d-flex justify-content-between align-items-center">
+								<h3 class="code-block-title">Response</h3>
+							</div>
+
+							<!-- Code section -->
+							<div class="code-block-body">
+								<pre>
+								<code>
+{
+"customer": {
+"id": "<span>cus_01J0A2B3C4D5</span>",
+"type": "<span>individual</span>",
+"given_name": "<span>Smith</span>",
+"family_name": "<span>Doe</span>",
+"email": "<span>smith@example.com</span>",
+"phone": "<span>+44201234567</span>",
+"status": "<span>pending_review</span>",
+"created_at": "<span>2025-09-19T14:01:22Z</span>"
+}
+}</code></pre>
+							</div>
 						</div>
 					</div>
 				</div>
+			</div>
 		</main>
 	</div>
 
